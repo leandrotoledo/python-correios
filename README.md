@@ -6,6 +6,7 @@ API Python para rastreamento de encomendas dos Correios
 
 Exemplo
 ===============
+<hr />
 <pre>
 #-*- encoding: utf-8 -*-
 from correios import Correios
