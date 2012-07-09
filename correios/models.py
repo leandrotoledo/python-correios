@@ -17,8 +17,6 @@ class Status(object):
             self.pais = self.re_localizacao_internacional.match(args[1]).groups()[0]
         self.situacao = args[2]
 
-        print args
-
         try:
             self.observacao = args[3]
         except IndexError:
@@ -33,3 +31,6 @@ class Encomenda(object):
     def adicionar_status(self, status):
         self.status.append(status)
         self.status.sort(key=lambda status: status.atualizacao)
+
+    def __str__(self):
+        return repr(self.identificador)
