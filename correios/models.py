@@ -22,18 +22,6 @@ class Status(object):
         except IndexError:
             self.observacao = None
 
-    def __str__(self):
-        return '{} {} em {}\n{} {}\n{}, {}/{}'.format(
-            self.atualizacao.date(),
-            self.atualizacao.time(),
-            self.agencia,
-            self.situacao,
-            self.observacao or '',
-            self.pais,
-            self.cidade,
-            self.estado
-        )
-
 
 class Encomenda(object):
     def __init__(self, identificador):
