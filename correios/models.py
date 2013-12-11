@@ -22,7 +22,7 @@ from datetime import datetime
 
 class Status(object):
     re_localizacao_nacional = re.compile(r'(?P<correios>.*) - (?P<cidade>.*)/(?P<estado>\w{2})')
-    re_localizacao_internacional = re.compile(r'(?P<pais>.*) - .*')
+    re_localizacao_internacional = re.compile(r'(?P<pais>.*)')
     # http://acheirelevante.blogspot.com.br/2012/02/significado-de-siglas-utilizadas-pelo.html
 
     def __init__(self, *args):
