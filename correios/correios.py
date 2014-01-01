@@ -72,7 +72,7 @@ class Correios(object):
     @staticmethod
     def get_encomenda(identificador):
         request = urllib2.urlopen('%s%s' % (Correios.URL, identificador))
-        html = request.read()
+        html = request.read().decode('latin-1')
         request.close()
 
         if html:
